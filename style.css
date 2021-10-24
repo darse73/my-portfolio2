@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+    background-color: rgba(11, 166, 255, 0.356);
+    margin:0;
+}
+
+/*ヘッダー*/
+.header {
+    height:8rem;
+    width:100%;
+    background-color:rgb(200, 229, 255);
+    display:flex;
+    justify-content:space-between;
+    position: fixed;
+    z-index: 1;
+    border-bottom: 0.8rem solid rgba(0, 0, 255, 0.5);
+    opacity: 0.95;
+}
+
+.header-logo {
+    flex-grow: 1;
+    display:flex;
+    align-items: center;
+}
+
+.jerryfish {
+    margin-left: 2rem;
+    height: 8rem;
+}
+
+#Darse {
+    color:black;
+    font-size: 3rem;
+    margin-left: 0.5rem;
+    font-family: 'arial black';
+}
+
+.header ul {
+    margin-right: 7rem;
+    flex-grow: 2;
+    display:flex;
+    justify-content: flex-end;
+}
+
+li {
+    list-style:none;
+}
+
+.header li { 
+    margin: 1rem 0rem 0rem 10rem;
+    font-size: 1.2rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.button {
+    position: relative;
+}
+
+.button:hover {
+    transition:all .3s ease 0s;
+    transform: scale(1.2);
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.2rem;
+    background-color: rgb(0, 140, 255);
+    transform: scale(0,1);
+    transform-origin: left;
+    transition: 0.2s;
+}
+
+.button:hover::before {
+    transform: scale(1);
+}
+
+/*メイン*/
+.main {
+    padding-top: 12rem;
+    position: relative;
+    text-align: center;
+    background-color: rgba(228, 243, 255, 0.877);
+    height:60rem;
+    width:100%;
+    margin:0 auto;
+    background-position: center;
+    background-size: 60%;
+    background-image: url(images/jerryfish.png);
+    background-repeat: no-repeat;
+    border-bottom: 0.5rem solid rgba(0, 0, 255, 0.5);
+}
+
+.main-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 6rem;
+    width: 100%;
+}
+
+.main-text h6{
+    animation: fedeIn 3s ease 0s 1 forwards;
+    opacity: 0;
+}
+
+.main-text h1{
+    animation: fedeIn 5s ease 3s 1 forwards;
+    opacity: 0;
+}
+
+@keyframes fedeIn {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.main-text span {
+    color: rgba(0, 89, 255, 0.699);
+    font-size: 7rem;
+}
+
+/* コンテンツ */
+.contents {
+    width: 84%;
+    background-color:  rgb(243, 243, 253);
+    text-align: center;
+    display: flex;
+    margin: 0 3%;
+    padding: 5rem 5%;
+}
+
+.introduction {
+    width: 80%;
+    text-align:left;
+}
+
+.theme {
+    display: flex;
+    align-items: center;
+    margin: 0 0 2rem;
+    font-size: 3rem;
+}
+
+p {
+    margin: 0.5rem 0 0.5rem 8rem;
+    font-size: 1.6rem;
+}
+
+.s-jerryfish  {
+    width: 8rem;
+}
+
+.face-container {
+    position: relative;
+    width: 100%;
+    height: 30rem;
+}
+
+#face {
+    position: absolute;
+    width: 20%;
+    top: 50%;
+    left: 50%;
+    transition: 0.2S;
+    transform: translate(-50%,
+    -50%);
+    border-radius: 50%;
+}
+
+.list {
+    font-size: 2.5rem;
+    margin-left: 8rem;
+}
+
+.list span {
+    color: rgb(0, 162, 255);
+}
+
+.name {
+    margin: 8rem 0;
+    position: relative;
+}
+
+.name::before {
+    content: "";
+    height: 0.5rem;
+    width: 70%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(0, 140, 255);
+    transition: 0.2s;
+    transform-origin: left;
+    transform: scale(0);
+}
+
+
+.name h4::after {
+    content: "こだまゆうや";
+    position: absolute;
+    right: 30%;
+    transform: scale(0);
+}
+
+.name:hover::before {
+    transform: scale(1);
+}
+
+.name h4:hover::after {
+    transform: scale(1);
+}
+
+.hobby {
+    position: relative;
+}
+
+.hobby-detail {
+    display: inline-block;
+}
+
+.black {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#hobby-image {
+    width: 50%;
+}
+
+.greeting {
+    width: 20%;
+}
+
+#plofile-image {
+    height: 20rem;
+    width: 100%;
+    margin: 2rem 0;
+    background-color: rgb(196, 226, 255);
+    position: relative;
+}
+
+#jerryfish_facial {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+}
+
+.greeting ul {
+    font-size: 1.5rem;
+    width:98%;
+    padding: 1rem 0;
+    border: 0.1rem solid hsl(194, 89%, 81%);
+}
+
+.greeting li {
+    margin: 1rem;
+}
+
+.footer {
+    width: 100%;
+}
+
+#first {
+    height: 1rem;
+    background-color: rgba(231, 67, 38, 0.521);
+}
+
+#second {
+    height: 3rem;
+    background-color: rgba(214, 64, 38, 0.589);
+}
+
+#third {
+    height: 10rem;
+    background-color: rgba(206, 53, 26, 0.61);
+}
+
